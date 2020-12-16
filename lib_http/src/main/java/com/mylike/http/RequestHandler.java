@@ -1,5 +1,7 @@
 package com.mylike.http;
 
+import android.util.Log;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,6 +26,7 @@ public class RequestHandler implements IRequestHandler{
         if (call.request.body!=null) writeContent(connection,call.request.body);
         if (!connection.getDoOutput()) connection.connect();
         int responseCode = connection.getResponseCode();
+        Log.e("CHttp-responseCode:",responseCode+"");
         if (responseCode>=200&&responseCode<400){
             byte[] bytes = new byte[1024];
             int len;
