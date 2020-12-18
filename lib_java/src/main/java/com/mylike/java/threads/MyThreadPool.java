@@ -30,6 +30,7 @@ public class MyThreadPool {
 
 class ThreadPool implements Runnable{//Atomic： 原子的
 //需要注意的是，AtomicInteger和Integer，int之前的区别，AtomicInteger可以保证线程安全。
+//    涉及到拆箱装箱知识。
     private AtomicInteger i=new AtomicInteger(0);//可保证多线程中保持原子操作
 //    private Integer i;
 //    private int i;
