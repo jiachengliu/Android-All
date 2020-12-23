@@ -13,7 +13,7 @@ import java.util.UUID;
 /**
  * author: liuxiansheng
  * data: 2020-12-04 15:22
- * desc:
+ * desc:文件+参数提交
  */
 public class MultipartBody extends RequestBody{
 

@@ -58,7 +58,7 @@ public class Request {
                 throw new IllegalStateException("访问url不能为空");
             }
             if (body!=null){
-                if (TextUtils.isEmpty(body.contentType())){
+                if (!TextUtils.isEmpty(body.contentType())){
                     heads.put("Content-Type",body.contentType());
                 }
             }
